@@ -3,20 +3,23 @@ services:
  - docker 
 
 before-install: 
- - docker build -t tkathuria/react-test -f ./client/Dockerfile.dev  ./client
+ - docker build -t tanuj212000/react-test -f ./client/Dockerfile.dev  ./client
 
 script: 
- - docker run  -e CI=true tkathuria/react-test npm test -- --coverage
+ - docker run  -e CI=true tanuj212000/react-test npm test -- --coverage
 
 after_success:
-  - docker build -t tkathuria/multi-client ./client 
-  - docker build -t tkathuria/multi-nginx ./nginx
-  - docker build -t tkathuria/multi-server ./server
-  - docker build -t tkathuria/multi-worker ./worker 
+  - docker build -t tanuj212000/multi-client ./client 
+  - docker build -t tanuj212000/multi-nginx ./nginx
+  - docker build -t tanuj212000/multi-server ./server
+  - docker build -t tanuj212000/multi-worker ./worker 
   #login to docker cli 
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   #take those images and push them to docker hub 
-  - docker push tkathuria/multi-client
-  - docker push tkathuria/multi-nginx
-  - docker push tkathuria/multi-server
-  - docker push tkathuria/multi-worker
+  - docker push tanuj212000/multi-client
+  - docker push tanuj212000/multi-nginx
+  - docker push tanuj212000/multi-server
+  - docker push tanuj212000/multi-worker
+
+
+
