@@ -10,7 +10,7 @@ services:
     hostname: api
     environment:
       - REDIS_HOST=$REDIS_HOST
-      - REDIS_PORT=$REDIS_PORT
+      - REDIS_PORT=$REDIS_PORT  
       - PGUSER=$PGUSER
       - PGHOST=$PGHOST
       - PGDATABASE=$PGDATABASE
