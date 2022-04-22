@@ -4,7 +4,7 @@ services:
     image: "tanuj212000/multi-client"
     mem_limit: 128m
     hostname: client
-  server:
+  api:
     image: "tanuj212000/multi-server"
     mem_limit: 128m
     hostname: api
@@ -30,5 +30,5 @@ services:
     ports:
       - "80:80"
     depends_on:
-      - server
+      - api
       - client
