@@ -25,6 +25,7 @@
         {
             "name": "nginx",
             "image": "tanuj212000/multi-nginx",
+            "hostname": "nginx",
             "essential": true,
             "portMappings": [
                 {
