@@ -6,36 +6,21 @@
           "image": "tanuj212000/multi-client",
           "hostname": "client",
           "essential": false,
-          "memory": 128,
-          "command": [
-            "tail",
-            "-f",
-            "/bin/bash"
-          ]
+          "memory": 128
         },
         {
             "name": "server",
             "image": "tanuj212000/multi-server",
             "hostname": "api",
             "essential": false,
-            "memory": 128,
-            "command": [
-                "tail",
-                "-f",
-                "/bin/bash"
-              ]
+            "memory": 128
         },
         {
             "name": "worker",
             "image": "tanuj212000/multi-worker",
             "hostname": "worker",
             "essential": false,
-            "memory": 128,
-            "command": [
-                "tail",
-                "-f",
-                "/bin/bash"
-              ]
+            "memory": 128
         },
         {
             "name": "nginx",
@@ -48,12 +33,7 @@
                 }
             ],
             "links": ["server","client"],
-            "memory": 128,
-            "command": [
-                "tail",
-                "-f",
-                "/bin/bash"
-              ]
+            "memory": 128
         }   
     ]
 }
